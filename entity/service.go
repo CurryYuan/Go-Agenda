@@ -18,7 +18,7 @@ func Logout() error {
 	return nil
 }
 
-func ListUser() error {
+func ListUsers() error {
 	return nil
 }
 

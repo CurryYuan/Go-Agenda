@@ -70,12 +70,12 @@ var logoutCmd = &cobra.Command{
 	},
 }
 
-var listUserCmd = &cobra.Command{
-	Use: "listUser",
+var listUsersCmd = &cobra.Command{
+	Use: "listUsers",
 	Short: "list all users",
 	Long: ``,
 	Run: func(com *cobra.Command, args []string){
-		if err := entity.ListUser(); err ==nil {
+		if err := entity.ListUsers(); err ==nil {
 			fmt.Println("list user success")
 		}
 	},
@@ -104,6 +104,6 @@ func init() {
 	rootCmd.AddCommand(registerCmd)
 	rootCmd.AddCommand(loginCmd)
 	rootCmd.AddCommand(logoutCmd)
-	rootCmd.AddCommand(listUserCmd)
+	rootCmd.AddCommand(listUsersCmd)
 	rootCmd.AddCommand(delUserCmd)
 }
