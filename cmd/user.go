@@ -36,7 +36,9 @@ var registerCmd = &cobra.Command{
 		phone, _ := com.Flags().GetString("phone")
 		checkEmpty("phone", phone)
 
-		if err := entity.Register(username,password,mail,phone); err ==nil {
+		if err := entity.Register(username,password,mail,phone); err !=nil {
+			fmt.Println(err)
+		} else {
 			fmt.Println("register success")
 		}
 	},
@@ -53,8 +55,10 @@ var loginCmd = &cobra.Command{
 		password, _ := com.Flags().GetString("password")
 		checkEmpty("password", password)
 
-		if err := entity.Login(username,password); err ==nil {
-			fmt.Println("login success")
+		if err := entity.Login(username,password); err !=nil {
+			fmt.Println(err)
+		} else {
+			fmt.Println("register success")
 		}
 	},
 }
@@ -64,8 +68,10 @@ var logoutCmd = &cobra.Command{
 	Short: "user logout",
 	Long: ``,
 	Run: func(com *cobra.Command, args []string){
-		if err := entity.Logout(); err ==nil {
-			fmt.Println("logout success")
+		if err := entity.Logout(); err !=nil {
+			fmt.Println(err)
+		} else {
+			fmt.Println("register success")
 		}
 	},
 }
@@ -75,8 +81,10 @@ var listUsersCmd = &cobra.Command{
 	Short: "list all users",
 	Long: ``,
 	Run: func(com *cobra.Command, args []string){
-		if err := entity.ListUsers(); err ==nil {
-			fmt.Println("list user success")
+		if err := entity.ListUsers(); err !=nil {
+			fmt.Println(err)
+		} else {
+			fmt.Println("register success")
 		}
 	},
 }
@@ -86,8 +94,10 @@ var delUserCmd = &cobra.Command{
 	Short: "delete user",
 	Long: ``,
 	Run: func(com *cobra.Command, args []string){
-		if err := entity.DelUser(); err ==nil {
-			fmt.Println("del user success")
+		if err := entity.DelUser(); err !=nil {
+			fmt.Println(err)
+		} else {
+			fmt.Println("register success")
 		}
 	},
 }

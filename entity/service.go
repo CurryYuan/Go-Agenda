@@ -25,3 +25,7 @@ func ListUsers() error {
 func DelUser() error {
 	return nil
 }
+
+func CreateMeeting(title string, participators []string, startTime string, endTime string) error {
+	return nil
+}
