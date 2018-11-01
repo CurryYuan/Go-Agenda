@@ -2,22 +2,11 @@ package cmd
 
 import (
 	"fmt"
-	"os"
+	//"os"
 
 	"github.com/spf13/cobra"
 	"agenda/entity"
 )
-
-func checkEmpty(key, value string) {
-	if value == "" {
-		printError(key + " can't be empty!\n")
-	}
-}
-
-func printError(error string) {
-	fmt.Fprint(os.Stderr, error)
-	os.Exit(1)
-}
 
 var registerCmd = &cobra.Command{
 	Use: "register",
@@ -25,21 +14,19 @@ var registerCmd = &cobra.Command{
 	Long: "Register a new user",
 	Run: func(com *cobra.Command, args []string){
 		username, _ := com.Flags().GetString("user")
-		checkEmpty("username", username)
 
 		password, _ := com.Flags().GetString("password")
-		checkEmpty("password", password)
 
 		mail, _ := com.Flags().GetString("mail")
-		checkEmpty("mail", mail)
 
 		phone, _ := com.Flags().GetString("phone")
-		checkEmpty("phone", phone)
 
 		if err := entity.Register(username,password,mail,phone); err !=nil {
+			errLog.Println(err)
 			fmt.Println(err)
 		} else {
 			fmt.Println("register success")
+			infoLog.Println("user "+username+" register success")
 		}
 	},
 }
@@ -50,15 +37,15 @@ var loginCmd = &cobra.Command{
 	Long: ``,
 	Run: func(com *cobra.Command, args []string){
 		username, _ := com.Flags().GetString("user")
-		checkEmpty("username", username)
 
 		password, _ := com.Flags().GetString("password")
-		checkEmpty("password", password)
 
 		if err := entity.Login(username,password); err !=nil {
+			errLog.Println(err)
 			fmt.Println(err)
 		} else {
-			fmt.Println("register success")
+			fmt.Println("login success")
+			infoLog.Println("user "+username+" login success")
 		}
 	},
 }
@@ -69,9 +56,11 @@ var logoutCmd = &cobra.Command{
 	Long: ``,
 	Run: func(com *cobra.Command, args []string){
 		if err := entity.Logout(); err !=nil {
+			errLog.Println(err)
 			fmt.Println(err)
 		} else {
-			fmt.Println("register success")
+			fmt.Println("logout success")
+			infoLog.Println("user logout success")
 		}
 	},
 }
@@ -82,9 +71,10 @@ var listUsersCmd = &cobra.Command{
 	Long: ``,
 	Run: func(com *cobra.Command, args []string){
 		if err := entity.ListUsers(); err !=nil {
+			errLog.Println(err)
 			fmt.Println(err)
 		} else {
-			fmt.Println("register success")
+			infoLog.Println("list all users")
 		}
 	},
 }
@@ -95,9 +85,11 @@ var delUserCmd = &cobra.Command{
 	Long: ``,
 	Run: func(com *cobra.Command, args []string){
 		if err := entity.DelUser(); err !=nil {
+			errLog.Println(err)
 			fmt.Println(err)
 		} else {
-			fmt.Println("register success")
+			fmt.Println("delete user success")
+			infoLog.Println("delete user success")
 		}
 	},
 }

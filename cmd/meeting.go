@@ -6,29 +6,30 @@ import (
 
 	"github.com/spf13/cobra"
 	"agenda/entity"
+	"agenda/log"
 )
+
+var infoLog=log.Info
+var errLog=log.Error
 
 var createMeetingCmd = &cobra.Command{
 	Use:   "createMeeting",
 	Short: "create meeting",
 	Long: ``,
 	Run: func(comd *cobra.Command, args []string) {
-		title, _ := comd.Flags().GetString("title")
-		checkEmpty("title", title)
-
+		title, _ := comd.Flags().GetString("title")	
 		participatorStr, _ := comd.Flags().GetString("participators")
-		checkEmpty("participators", participatorStr)
 		participators := strings.Split(participatorStr, " ")
 
 		startTime, _ := comd.Flags().GetString("start")
-		checkEmpty("Start Time", startTime)
 
 		endTime, _ := comd.Flags().GetString("end")
-		checkEmpty("End Time", endTime)
 
 		if err := entity.CreateMeeting(title, participators, startTime, endTime); err != nil {
+			errLog.Println(err)
 			fmt.Println(err)
 		} else {
+			infoLog.Println("create meeting success")
 			fmt.Println("create meeting success")
 		}
 	},
@@ -41,18 +42,16 @@ var addParCmd = &cobra.Command{
 	by specifying the title name.`,
 	Run: func(comd *cobra.Command, args []string) {
 		title, _ := comd.Flags().GetString("title")
-		checkEmpty("title", title)
 
 		participatorStr, _ := comd.Flags().GetString("participators")
-		checkEmpty("participators", participatorStr)
 
 		participators := strings.Split(participatorStr, ",")
 
 		if err := entity.AddPar(title, participators); err != nil {
-			//errLog.Println(err)
+			errLog.Println(err)
 			fmt.Println(err)
 		} else {
-			//logLog.Println("Add meeting participator successfully!")
+			infoLog.Println("Add meeting participator successfully!")
 			fmt.Println("Add meeting participator successfully!")
 		}
 	},
@@ -65,18 +64,16 @@ var removeParCmd = &cobra.Command{
 	by specifying the title name.`,
 	Run: func(comd *cobra.Command, args []string) {
 		title, _ := comd.Flags().GetString("title")
-		checkEmpty("title", title)
 
 		participatorStr, _ := comd.Flags().GetString("participators")
-		checkEmpty("participators", participatorStr)
 
 		participators := strings.Split(participatorStr, ",")
 
 		if err := entity.RemovePar(title, participators); err != nil {
-			//errLog.Println(err)
+			errLog.Println(err)
 			fmt.Println(err)
 		} else {
-			//logLog.Println("Remove meeting participator successfully!")
+			infoLog.Println("Remove meeting participator successfully!")
 			fmt.Println("Remove meeting participator successfully!")
 		}
 	},
@@ -89,16 +86,14 @@ var listMeetingsCmd = &cobra.Command{
 	which you attended, during a time interval.`,
 	Run: func(comd *cobra.Command, args []string) {
 		startTime, _ := comd.Flags().GetString("start")
-		checkEmpty("Start Time", startTime)
 
 		endTime, _ := comd.Flags().GetString("end")
-		checkEmpty("End Time", endTime)
 
 		if err := entity.ListMeetings(startTime, endTime); err != nil {
-			//errLog.Println(err)
+			errLog.Println(err)
 			fmt.Println(err)
 		} else {
-			//logLog.Println("Listing meeting operation completed successfully!")
+			infoLog.Println("Listing meeting operation completed successfully!")
 			fmt.Println("Listing meeting operation completed successfully!")
 		}
 	},
@@ -110,14 +105,13 @@ var cancelMeetingCmd = &cobra.Command{
 	Long:  `Using this command, you are able to cancel the meetings, which are created by you.`,
 	Run: func(comd *cobra.Command, args []string) {
 		title, _ := comd.Flags().GetString("title")
-		checkEmpty("Title", title)
 
 		if err := entity.CancelMeeting(title); err != nil {
-			//errLog.Println(err)
+			errLog.Println(err)
 			fmt.Println(err)
 		} else {
+			infoLog.Println("The meeting was successfully deleted!")
 			fmt.Println("The meeting was successfully deleted!")
-			//logLog.Println("The meeting was successfully deleted!")
 		}
 	},
 }
@@ -128,13 +122,12 @@ var quitMeetingCmd = &cobra.Command{
 	Long:  `You can quit any meetings you want, which are you attended, not created.`,
 	Run: func(comd *cobra.Command, args []string) {
 		title, _ := comd.Flags().GetString("title")
-		checkEmpty("Title", title)
 
 		if err := entity.QuitMeeting(title); err != nil {
-			//errLog.Println(err)
+			errLog.Println(err)
 			fmt.Println(err)
 		} else {
-			//logLog.Println("You've successfully quit the meeting " + title + "!")
+			infoLog.Println("You've successfully quit the meeting " + title + "!")
 			fmt.Println("You've successfully quit the meeting " + title + "!")
 		}
 	},
@@ -147,11 +140,12 @@ var clearMeetingsCmd = &cobra.Command{
 	Run: func(comd *cobra.Command, args []string) {
 
 		if err := entity.ClearMeeting(); err != nil {
-			//errLog.Println(err)
+			errLog.Println(err)
 			fmt.Println(err)
 		} else {
-			//logLog.Println("You've successfully cleared all the meetings you sponsored!")
+			infoLog.Println("You've successfully cleared all the meetings you sponsored!")
 			fmt.Println("You've successfully cleared all the meetings you sponsored!")
+
 		}
 	},
 }
@@ -159,8 +153,8 @@ var clearMeetingsCmd = &cobra.Command{
 func init() {
 	createMeetingCmd.Flags().StringP("title", "t", "", "title")
 	createMeetingCmd.Flags().StringP("participators", "p", "", "participator name")
-	createMeetingCmd.Flags().StringP("start", "s", "", "start time (yyyy-mm-dd)")
-	createMeetingCmd.Flags().StringP("end", "e", "", "end time (yyyy-mm-dd)")
+	createMeetingCmd.Flags().StringP("start", "s", "", "start time (format: yyyy-mm-dd/hh:mm)")
+	createMeetingCmd.Flags().StringP("end", "e", "", "end time (format: yyyy-mm-dd/hh:mm)")
 	rootCmd.AddCommand(createMeetingCmd)
 
 	addParCmd.Flags().StringP("title", "t", "", "meeting title")
@@ -171,8 +165,8 @@ func init() {
 	removeParCmd.Flags().StringP("participators", "p", "", "meeting participators name")
 	rootCmd.AddCommand(removeParCmd)
 
-	listMeetingsCmd.Flags().StringP("start", "s", "", "start time (yyyy-mm-dd)")
-	listMeetingsCmd.Flags().StringP("end", "e", "", "end time (yyyy-mm-dd)")
+	listMeetingsCmd.Flags().StringP("start", "s", "", "start time (format: yyyy-mm-dd/hh:mm)")
+	listMeetingsCmd.Flags().StringP("end", "e", "", "end time (format: yyyy-mm-dd/hh:mm)")
 	rootCmd.AddCommand(listMeetingsCmd)
 
 	cancelMeetingCmd.Flags().StringP("title", "t", "", "meeting title")
