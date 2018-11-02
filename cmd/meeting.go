@@ -4,22 +4,23 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/spf13/cobra"
 	"agenda/entity"
 	"agenda/log"
+
+	"github.com/spf13/cobra"
 )
 
-var infoLog=log.Info
-var errLog=log.Error
+var infoLog = log.Info
+var errLog = log.Error
 
 var createMeetingCmd = &cobra.Command{
 	Use:   "createMeeting",
 	Short: "create meeting",
-	Long: ``,
+	Long:  ``,
 	Run: func(comd *cobra.Command, args []string) {
-		title, _ := comd.Flags().GetString("title")	
+		title, _ := comd.Flags().GetString("title")
 		participatorStr, _ := comd.Flags().GetString("participators")
-		participators := strings.Split(participatorStr, " ")
+		participators := strings.Split(participatorStr, ",")
 
 		startTime, _ := comd.Flags().GetString("start")
 

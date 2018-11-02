@@ -4,15 +4,16 @@ import (
 	"fmt"
 	//"os"
 
-	"github.com/spf13/cobra"
 	"agenda/entity"
+
+	"github.com/spf13/cobra"
 )
 
 var registerCmd = &cobra.Command{
-	Use: "register",
+	Use:   "register",
 	Short: "Register user",
-	Long: "Register a new user",
-	Run: func(com *cobra.Command, args []string){
+	Long:  "Register a new user",
+	Run: func(com *cobra.Command, args []string) {
 		username, _ := com.Flags().GetString("user")
 
 		password, _ := com.Flags().GetString("password")
@@ -21,41 +22,41 @@ var registerCmd = &cobra.Command{
 
 		phone, _ := com.Flags().GetString("phone")
 
-		if err := entity.Register(username,password,mail,phone); err !=nil {
+		if err := entity.Register(username, password, mail, phone); err != nil {
 			errLog.Println(err)
 			fmt.Println(err)
 		} else {
 			fmt.Println("register success")
-			infoLog.Println("user "+username+" register success")
+			infoLog.Println("user " + username + " register success")
 		}
 	},
 }
 
 var loginCmd = &cobra.Command{
-	Use: "login",
+	Use:   "login",
 	Short: "user login",
-	Long: ``,
-	Run: func(com *cobra.Command, args []string){
+	Long:  ``,
+	Run: func(com *cobra.Command, args []string) {
 		username, _ := com.Flags().GetString("user")
 
 		password, _ := com.Flags().GetString("password")
 
-		if err := entity.Login(username,password); err !=nil {
+		if err := entity.Login(username, password); err != nil {
 			errLog.Println(err)
 			fmt.Println(err)
 		} else {
 			fmt.Println("login success")
-			infoLog.Println("user "+username+" login success")
+			infoLog.Println("user " + username + " login success")
 		}
 	},
 }
 
 var logoutCmd = &cobra.Command{
-	Use: "logout",
+	Use:   "logout",
 	Short: "user logout",
-	Long: ``,
-	Run: func(com *cobra.Command, args []string){
-		if err := entity.Logout(); err !=nil {
+	Long:  ``,
+	Run: func(com *cobra.Command, args []string) {
+		if err := entity.Logout(); err != nil {
 			errLog.Println(err)
 			fmt.Println(err)
 		} else {
@@ -66,11 +67,11 @@ var logoutCmd = &cobra.Command{
 }
 
 var listUsersCmd = &cobra.Command{
-	Use: "listUsers",
+	Use:   "listUsers",
 	Short: "list all users",
-	Long: ``,
-	Run: func(com *cobra.Command, args []string){
-		if err := entity.ListUsers(); err !=nil {
+	Long:  ``,
+	Run: func(com *cobra.Command, args []string) {
+		if err := entity.ListUsers(); err != nil {
 			errLog.Println(err)
 			fmt.Println(err)
 		} else {
@@ -80,11 +81,11 @@ var listUsersCmd = &cobra.Command{
 }
 
 var delUserCmd = &cobra.Command{
-	Use: "delUser",
+	Use:   "delUser",
 	Short: "delete user",
-	Long: ``,
-	Run: func(com *cobra.Command, args []string){
-		if err := entity.DelUser(); err !=nil {
+	Long:  ``,
+	Run: func(com *cobra.Command, args []string) {
+		if err := entity.DelUser(); err != nil {
 			errLog.Println(err)
 			fmt.Println(err)
 		} else {

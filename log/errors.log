@@ -1,0 +1,54 @@
+Error:2018/11/02 21:24:32 user.go:45: yhz doesn't exist
+Error:2018/11/02 21:24:46 user.go:45: yhz doesn't exist
+Error:2018/11/02 21:27:51 user.go:45: yhz doesn't exist
+Error:2018/11/02 21:31:04 user.go:45: yhz doesn't exist
+Error:2018/11/02 21:35:18 user.go:45: yhz doesn't exist
+Error:2018/11/02 21:42:50 user.go:45: yhz doesn't exist
+Error:2018/11/02 21:47:58 user.go:45: yhz doesn't exist
+Error:2018/11/02 21:49:54 user.go:45: yhz doesn't exist
+Error:2018/11/02 21:54:30 user.go:45: yhz doesn't exist
+Error:2018/11/02 21:56:57 user.go:45: yh doesn't exist
+Error:2018/11/02 21:57:59 meeting.go:94: date formal error
+Error:2018/11/02 22:18:47 user.go:60: Not logged in!
+Error:2018/11/02 22:18:54 user.go:75: Not logged in!
+Error:2018/11/02 22:22:56 meeting.go:30: Not logged in!
+Error:2018/11/02 22:23:22 meeting.go:30: Not logged in!
+Error:2018/11/02 22:25:39 meeting.go:30: Not logged in!
+Error:2018/11/02 22:27:11 meeting.go:30: Not logged in!
+Error:2018/11/02 22:27:36 meeting.go:30: Not logged in!
+Error:2018/11/02 22:28:25 user.go:75: Not logged in!
+Error:2018/11/02 22:29:54 meeting.go:30: Not logged in!
+Error:2018/11/02 22:29:57 user.go:75: Not logged in!
+Error:2018/11/02 22:30:02 user.go:75: Not logged in!
+Error:2018/11/02 22:33:51 user.go:75: Not logged in!
+Error:2018/11/02 22:33:58 user.go:75: Not logged in!
+Error:2018/11/02 22:34:08 meeting.go:30: Not logged in!
+Error:2018/11/02 22:34:58 meeting.go:30: Not logged in!
+Error:2018/11/02 22:35:36 user.go:75: Not logged in!
+Error:2018/11/02 22:35:47 user.go:75: Not logged in!
+Error:2018/11/02 22:36:40 user.go:45: Expect 2 parameters
+Error:2018/11/02 22:40:28 user.go:75: Not logged in!
+Error:2018/11/02 22:43:10 user.go:75: Not logged in!
+Error:2018/11/02 22:43:15 user.go:75: Not logged in!
+Error:2018/11/02 22:45:00 user.go:75: Not logged in!
+Error:2018/11/02 23:20:34 user.go:75: Not logged in!
+Error:2018/11/02 23:20:41 user.go:75: Not logged in!
+Error:2018/11/02 23:22:03 user.go:75: Not logged in!
+Error:2018/11/02 23:23:11 user.go:75: Not logged in!
+Error:2018/11/02 23:32:01 user.go:60: Not logged in!
+Error:2018/11/02 23:33:14 user.go:60: Not logged in!
+Error:2018/11/02 23:33:47 meeting.go:30: invalid date
+Error:2018/11/02 23:36:51 meeting.go:30: invalid date
+Error:2018/11/02 23:38:05 meeting.go:30: invalid date
+Error:2018/11/02 23:42:44 meeting.go:30: invalid date
+Error:2018/11/02 23:43:30 meeting.go:30: exist meeting abc
+Error:2018/11/02 23:44:38 meeting.go:30: invalid date
+Error:2018/11/02 23:44:50 meeting.go:30: exist meeting abc
+Error:2018/11/02 23:45:01 meeting.go:30: yj,yh isn't registered
+Error:2018/11/02 23:46:23 meeting.go:30: yj repeatedly appear
+Error:2018/11/02 23:50:40 meeting.go:94: Expect 2 parameters
+Error:2018/11/02 23:55:43 meeting.go:128: yhz isn't a participator of the meetingabc
+Error:2018/11/03 00:07:32 meeting.go:94: End date is earlier than( equal to) start date!
+Error:2018/11/03 00:25:13 meeting.go:52: yzz is busy for other meeting!
+Error:2018/11/03 01:02:18 meeting.go:74: yhz doesn't sponsor the meeting abc
+Error:2018/11/03 01:18:19 user.go:89: fail to delete yj

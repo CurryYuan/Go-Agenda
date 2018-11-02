@@ -1,12 +1,73 @@
-Info:2018/11/01 17:26:02 meeting.go:132: You've successfully quit the meeting t!
-Info:2018/11/01 17:41:03 meeting.go:143: You've successfully quit the meeting t!
-Info:2018/11/01 17:41:35 meeting.go:143: You've successfully quit the meeting  !
-Info:2018/11/01 17:43:51 meeting.go:143: You've successfully quit the meeting  
- !
-Info:2018/11/01 17:45:30 meeting.go:143: You've successfully quit the meeting  
- !
-Info:2018/11/01 17:46:27 meeting.go:143: You've successfully quit the meeting !
-Info:2018/11/01 17:53:37 meeting.go:130: You've successfully quit the meeting d!
-Info:2018/11/01 17:55:37 meeting.go:130: You've successfully quit the meeting d f!
-Info:2018/11/01 17:57:49 meeting.go:130: You've successfully quit the meeting d f!
-Info:2018/11/01 17:58:00 meeting.go:130: You've successfully quit the meeting !
+Info:2018/11/02 21:24:42 user.go:30: user yhz register success
+Info:2018/11/02 21:26:24 user.go:30: user yhz register success
+Info:2018/11/02 21:27:44 user.go:30: user yhz register success
+Info:2018/11/02 21:29:06 user.go:30: user yhz register success
+Info:2018/11/02 21:30:58 user.go:30: user yhz register success
+Info:2018/11/02 21:33:58 user.go:30: user yhz register success
+Info:2018/11/02 21:35:14 user.go:30: user yhz register success
+Info:2018/11/02 21:39:45 user.go:30: user yhz register success
+Info:2018/11/02 21:42:45 user.go:30: user yhz register success
+Info:2018/11/02 21:47:48 user.go:30: user yhz register success
+Info:2018/11/02 21:55:12 user.go:49: user yhz login success
+Info:2018/11/02 21:55:54 user.go:30: user yhz register success
+Info:2018/11/02 21:56:07 user.go:49: user yhz login success
+Info:2018/11/02 21:57:10 user.go:30: user yh register success
+Info:2018/11/02 21:57:15 user.go:30: user yj register success
+Info:2018/11/02 21:57:42 user.go:64: user logout success
+Info:2018/11/02 21:59:23 user.go:78: list all users
+Info:2018/11/02 22:15:56 user.go:78: list all users
+Info:2018/11/02 22:19:17 user.go:49: user yhz login success
+Info:2018/11/02 22:23:04 user.go:49: user yhz login success
+Info:2018/11/02 22:25:36 user.go:49: user yhz login success
+Info:2018/11/02 22:27:28 user.go:49: user yhz login success
+Info:2018/11/02 22:28:14 user.go:49: user yhz login success
+Info:2018/11/02 22:30:00 user.go:49: user yhz login success
+Info:2018/11/02 22:33:56 user.go:49: user yhz login success
+Info:2018/11/02 22:35:42 user.go:49: user yhz login success
+Info:2018/11/02 22:35:49 user.go:49: user yhz login success
+Info:2018/11/02 22:36:50 user.go:49: user yhz login success
+Info:2018/11/02 22:40:08 user.go:49: user yhz login success
+Info:2018/11/02 22:43:22 user.go:49: user yhz login success
+Info:2018/11/02 22:44:58 user.go:49: user yhz login success
+Info:2018/11/02 23:20:38 user.go:49: user yhz login success
+Info:2018/11/02 23:22:01 user.go:49: user yhz login success
+Info:2018/11/02 23:23:09 user.go:49: user yhz login success
+Info:2018/11/02 23:27:28 user.go:49: user yhz login success
+Info:2018/11/02 23:27:30 user.go:78: list all users
+Info:2018/11/02 23:28:20 user.go:64: user logout success
+Info:2018/11/02 23:28:30 user.go:64: user logout success
+Info:2018/11/02 23:30:01 user.go:78: list all users
+Info:2018/11/02 23:30:05 user.go:64: user logout success
+Info:2018/11/02 23:32:06 user.go:49: user yhz login success
+Info:2018/11/02 23:32:08 user.go:64: user logout success
+Info:2018/11/02 23:32:10 user.go:64: user logout success
+Info:2018/11/02 23:33:12 user.go:64: user logout success
+Info:2018/11/02 23:33:19 user.go:49: user yhz login success
+Info:2018/11/02 23:33:26 user.go:78: list all users
+Info:2018/11/02 23:50:10 meeting.go:33: create meeting success
+Info:2018/11/02 23:51:44 meeting.go:97: Listing meeting operation completed successfully!
+Info:2018/11/02 23:52:59 meeting.go:97: Listing meeting operation completed successfully!
+Info:2018/11/02 23:53:13 user.go:78: list all users
+Info:2018/11/02 23:53:39 user.go:78: list all users
+Info:2018/11/02 23:53:47 user.go:78: list all users
+Info:2018/11/02 23:53:59 user.go:78: list all users
+Info:2018/11/02 23:54:24 user.go:78: list all users
+Info:2018/11/02 23:54:37 user.go:78: list all users
+Info:2018/11/02 23:57:15 user.go:30: user yzz register success
+Info:2018/11/03 00:08:43 meeting.go:55: Add meeting participator successfully!
+Info:2018/11/03 00:08:49 meeting.go:55: Add meeting participator successfully!
+Info:2018/11/03 00:14:03 meeting.go:55: Add meeting participator successfully!
+Info:2018/11/03 00:17:50 meeting.go:55: Add meeting participator successfully!
+Info:2018/11/03 00:25:10 meeting.go:55: Add meeting participator successfully!
+Info:2018/11/03 01:03:13 meeting.go:33: create meeting success
+Info:2018/11/03 01:03:34 meeting.go:55: Add meeting participator successfully!
+Info:2018/11/03 01:03:43 meeting.go:77: Remove meeting participator successfully!
+Info:2018/11/03 01:11:08 meeting.go:33: create meeting success
+Info:2018/11/03 01:11:12 meeting.go:55: Add meeting participator successfully!
+Info:2018/11/03 01:11:14 meeting.go:77: Remove meeting participator successfully!
+Info:2018/11/03 01:12:29 user.go:49: user yj login success
+Info:2018/11/03 01:13:49 meeting.go:131: You've successfully quit the meeting abc!
+Info:2018/11/03 01:14:33 meeting.go:97: Listing meeting operation completed successfully!
+Info:2018/11/03 01:21:32 user.go:93: delete user success
+Info:2018/11/03 01:27:04 user.go:30: user yj register success
+Info:2018/11/03 01:27:09 user.go:93: delete user success
