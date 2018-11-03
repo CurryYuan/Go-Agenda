@@ -59,4 +59,57 @@ func QuitMeeting(title string) error
 func ClearMeeting() error 
 
 ## 测试
+```
+./agenda register -u a -p b -m c -t d
+register success
+```
 
+```
+./agenda login -u a -p b
+login success
+```
+
+```
+./agenda login -u a -p b
+login success
+```
+```
+./agenda listUsers
+[list all users]
+---------------------------------------------------
+[username]	yhz
+[email]		1
+[phone]		123
+---------------------------------------------------
+[username]	yh
+[email]		1
+[phone]		123
+---------------------------------------------------
+[username]	yzz
+[email]		111
+[phone]		123
+---------------------------------------------------
+[username]	a
+[email]		c
+[phone]		d
+---------------------------------------------------
+```
+
+```
+./agenda createMeeting -t t -p yhz a -s 2018-01-01/00:00 -e 2018-01-02/00:00
+create meeting success
+```
+
+```
+./agenda list -s 2018-01-01/00:00 -e 2018-02-01/00:00
+[list meetings in 2018-01-01/00:00 —— 2018-02-01/00:00]
+---------------------------------------------------
+[sponsor]	a
+[title]		t
+[start]   	2018-1-1/0:0
+[end]		2018-1-2/0:0
+[participator]
+	
+  yhz---------------------------------------------------
+
+```
