@@ -59,6 +59,38 @@ func QuitMeeting(title string) error
 func ClearMeeting() error 
 
 ## 测试
+
+```
+./agenda -h
+A program for meeting manage
+
+Usage:
+  agenda [command]
+
+Available Commands:
+  addPar        Add your own meetings' participators.
+  cancel        Cancel your own meeting by specifying title name.
+  createMeeting create meeting
+  delUser       delete user
+  help          Help about any command
+  list          List all of your own meetings during a time interval.
+  listUsers     list all users
+  login         user login
+  logout        user logout
+  quit          Quit others meeting by specifying title name
+  register      Register user
+  removePar     Remove your own meetings' participators.
+
+Flags:
+      --config string   config file (default is $HOME/.agenda.yaml)
+  -h, --help            help for agenda
+  -t, --toggle          Help message for toggle
+
+Use "agenda [command] --help" for more information about a command.
+
+```
+
+
 ```
 ./agenda register -u a -p b -m c -t d
 register success
