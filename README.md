@@ -113,3 +113,28 @@ create meeting success
   yhz---------------------------------------------------
 
 ```
+
+```
+./agenda addPar -t t  -p yzz yz
+Add meeting participator successfully!
+```
+
+```
+./agenda removePar -t t -p yhz yz
+Remove meeting participator successfully!
+```
+
+```
+./agenda list -s 2018-01-01/00:00 -e 2018-02-01/00:00
+[list meetings in 2018-01-01/00:00 —— 2018-02-01/00:00]
+---------------------------------------------------
+[sponsor]	a
+[title]		t
+[start]   	2018-1-1/0:0
+[end]		2018-1-2/0:0
+[participator]
+	
+  yzz---------------------------------------------------
+Listing meeting operation completed successfully!
+
+```
